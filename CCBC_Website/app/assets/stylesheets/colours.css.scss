@@ -1,0 +1,52 @@
+@import "greens.scss";
+
+.background, body {
+  background-color: $background;
+}
+
+.colour_text, h1, h2, h3 {
+  color: $colour_text;
+}
+
+p {
+  color: $black;
+}
+
+.inner_background, header, .box {
+  background-color: $inner_background;
+}
+
+.border_colour, header, table tr td, .box {
+  border-color: $border_colour;
+}
+
+img#CCBC_Logo {
+  background-color: $white;
+  border-color: $white;
+}
+
+nav#navbar ul li {
+  a {
+    color: $white;
+    background-color: $border_colour;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  
+  a:hover, a:active {
+    color: $border_colour;
+    background-color: $background;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+}
+
+a.intro_link {
+  color: $black;
+}
+
+a.intro_link:hover, a.intro_link:active {
+  color: $white;
+  background-color: $border_colour;
+}
+
