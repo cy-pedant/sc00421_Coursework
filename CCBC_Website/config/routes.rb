@@ -1,5 +1,10 @@
 CCBCWebsite::Application.routes.draw do
   
+#  get "booking/index"
+#  get "booking/show"
+#  get "booking/book1"
+#  get "booking/book2"
+#  get "booking/book3"
   root "ccbc_core#Home"
   
   get "/about" => "ccbc_core#About"
@@ -9,8 +14,16 @@ CCBCWebsite::Application.routes.draw do
   get "/newsletters" => "ccbc_core#Newsletters"
   get "/club" => "ccbc_core#Club"
   get "/map" => "ccbc_core#Map"
-  get "/booking" => "ccbc_core#Booking"
   get "/links" => "ccbc_core#Links"
+#  get "/booking" => "ccbc_core#Booking"
+  
+  get "/booking" => "booking#index"
+  get "/booking/:id" => "booking#show"
+  get "/booking/:id/book1" => "booking#book1"
+  get "/booking/:id/book2" => "booking#book2"
+  get "/booking/:id/book3" => "booking#book3"
+  get "/source" => "booking#source"
+  get "/destroyer" => "booking#reset_all"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

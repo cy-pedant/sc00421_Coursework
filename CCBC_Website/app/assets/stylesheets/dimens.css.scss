@@ -16,6 +16,40 @@ table#header_table tr td {
   max-height: 200px;
 }
 
+section#lawns {
+  width: 100%; height: 600px;
+  
+  div.lawn1 {
+    position: relative;
+    width: 216px; height: 363px; // Without the 3px border: height = 360 (3 added)
+    top: 0px; left: 60px;
+    
+    span.booked_lawn, a.unbooked_lawn {
+      width: 216px; height: 363px;
+    }
+  }
+
+  div.lawn2 {
+    position: relative;
+    width: 360px; height: 216px;
+    top: -369px; left: 279px; // Without the 3px border: top = -360 (9 subtracted), left = 276 (3 added)
+  
+    span.booked_lawn, a.unbooked_lawn {
+      width: 360px; height: 216px;
+    }
+  }
+  
+  div.lawn3 {
+    position: relative;
+    width: 216px; height: 144px;
+    top: -372px; left: 423px; // Without the 3px border: top = -360 (12 subtracted), left = 420 (3 added)
+  
+    span.booked_lawn, a.unbooked_lawn {
+      width: 216px; height: 144px;
+    }
+  }
+
+}
 @media screen and (min-width: 1304px) {
   header, nav, article, footer {
     max-width: $max_width;
@@ -42,11 +76,74 @@ table#header_table tr td {
   p {
     font-size: 12px;
   }
+
+  section#lawns {
+    div.lawn1 {
+      width: 120px; height: 203px;
+      top: 0px; left: 40px;
+      span.booked_lawn, a.unbooked_lawn {
+        width: 120px; height: 203px;
+      }
+    }
+    div.lawn2 {
+      width: 200px; height: 120px;
+      top: -209px; left: 163px; 
+      span.booked_lawn, a.unbooked_lawn {
+        width: 200px; height: 120px;
+      }
+    }
+    div.lawn3 {
+      width: 120px; height: 80px;
+      top: -212px; left: 243px;
+      span.booked_lawn, a.unbooked_lawn {
+        width: 120px; height: 80px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
   nav#navbar ul li a {
     font-size: 8px;
+  }
+
+  ul.days_nav li {
+  
+    a, span {
+      font-size: 10px;
+    }
+  }
+
+  section#lawns div {
+    span.booked_lawn, a.unbooked_lawn {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+  section#lawns {
+    div.lawn1 {
+      width: 150px; height: 253px;
+      top: 0px; left: 60px;
+      span.booked_lawn, a.unbooked_lawn {
+        width: 150px; height: 253px;
+      }
+    }
+    div.lawn2 {
+      width: 250px; height: 150px;
+      top: -259px; left: 213px; 
+      span.booked_lawn, a.unbooked_lawn {
+        width: 250px; height: 150px;
+      }
+    }
+    div.lawn3 {
+      width: 150px; height: 100px;
+      top: -262px; left: 313px;
+      span.booked_lawn, a.unbooked_lawn {
+        width: 150px; height: 100px;
+      }
+    }
   }
 }
 

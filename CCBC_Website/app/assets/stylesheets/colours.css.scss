@@ -29,15 +29,11 @@ nav#navbar ul li {
   a {
     color: $white;
     background-color: $border_colour;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
   }
   
   a:hover, a:active {
     color: $border_colour;
     background-color: $background;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
   }
 }
 
@@ -49,4 +45,39 @@ a.intro_link:hover, a.intro_link:active {
   color: $white;
   background-color: $border_colour;
 }
+
+ul.days_nav li {
+  a {
+  color: $black;
+    background-color: $light_grey
+  }
+
+  span {
+    color: $white;
+    background-color: $dark_grey;
+  }
+
+  a:hover, a:active {
+    color: $white;
+    background-color: $dark_grey;
+  }
+}
+
+section.lawns {  
+  
+  div {
+    border-color: $black;
+    background-color: $white;
+    
+    span.booked_lawn {
+      background-color: $light-grey;
+    }
+  }
+
+  div:hover {
+    background-color: $highlight;
+  }
+}
+
+
 

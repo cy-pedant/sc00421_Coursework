@@ -3,12 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .box {
-  padding: 10px;
+  padding: 10px 20px;
 	border-width: 5px; border-style: solid; border-radius: 10px;
 }
 
 header#page_header {
-  padding-top: 10px; padding-bottom: 10px;
   margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px;
 }
 
@@ -69,9 +68,21 @@ nav#navbar {
         display:block;
         height: 100%;
         font-size: 15px; font-weight: bold; font-variant: small-caps;
-        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;        
+        font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
         text-align: center; text-decoration: none;
         padding: 5px 0px;
+        -ms-transition: 0.25s all;
+        -o-transition: 0.25s all;
+        -moz-transition: 0.25s all;
+        -webkit-transition: 0.25s all;
+        transition: 0.25s all;
+      }
+      a:hover, a:active {
+        -ms-transition: 0.25s all;
+        -o-transition: 0.25s all;
+        -moz-transition: 0.25s all;
+        -webkit-transition: 0.25s all;
+        transition: 0.25s all;
       }
     }
   }
@@ -84,7 +95,12 @@ footer p {
 
 article#page_content {
   margin-top: 0px; margin-left: auto; margin-right: auto;
-  padding: 10px 20px;
+}
+
+h2.article_title {
+  text-size: 40px;
+  font-weight: bold;
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 }
 
 p#intro_text {

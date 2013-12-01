@@ -2,7 +2,9 @@
   <table id="header_table">
     <tr>
       <td class="image_cell">
-        <%= image_tag "CCBC_Logo.png", id: "CCBC_Logo", alt: "CCBC Logo", title: "The Cheam Croquet & Bowls Club" %>
+        <%= link_to(root_path) do %>
+          <%= image_tag "CCBC_Logo.png", id: "CCBC_Logo", alt: "CCBC Logo", title: "The Cheam Croquet & Bowls Club" %>
+        <% end %>
       </td>
       <td class="title_cell">
         <h1 id="header_title">
