@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lawn1: false
+  lawn2: false
+  lawn3: false
+  day: 2013-11-30
+
+two:
+  lawn1: false
+  lawn2: false
+  lawn3: false
+  day: 2013-11-30

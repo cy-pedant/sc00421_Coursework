@@ -1,0 +1,10 @@
+<h2 class="article_title"><%= @title %></h2>
+<p><span id="test_block"></span></p>
+
+<%= render 'booking/days' %>
+
+<section class="lawns">
+  <%= content_tag(:div, "", id: "lawn1-" + params[:id], class: "lawn1") %>
+  <%= content_tag(:div, "", id: "lawn2-" + params[:id], class: "lawn2") %>
+  <%= content_tag(:div, "", id: "lawn3-" + params[:id], class: "lawn3") %>
+</section>
