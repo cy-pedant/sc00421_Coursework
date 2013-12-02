@@ -1,5 +1,5 @@
 <h2 class="article_title"><%= @title %></h2>
-<p><span id="test_block"></span></p>
+<%= content_tag(:a, "Not up to date? Click here to update", href: "\\update\\" + params[:id], class: "update_link") %>
 
 <%= render 'booking/days' %>
 

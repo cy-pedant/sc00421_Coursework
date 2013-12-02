@@ -19,13 +19,22 @@ module BookingHelper
   # Update the table for the number of days missed
   def update_table
     first_day = Booking.find(1).day
-    if (first_day != Time.now.to_date) then
+    today = Date.today
+    if (first_day != today) then
       days_out_of_date = 0;
-      while (first_day != Time.now.to_date) do
+      while (first_day != today) do
+        first_day = first_day.next
         days_out_of_date += 1;
       end
       if (days_out_of_date >= 10) then
-        reset_table
+        for i in 1..10 do
+          date = Booking.find(i)
+          date.lawn1 = false
+          date.lawn2 = false
+          date.lawn3 = false
+          date.day = today.next_day(i-1)
+          date.save
+        end
       else
         rows_to_keep = 10 - days_out_of_date
         for i in 1..rows_to_keep do
@@ -38,7 +47,12 @@ module BookingHelper
           current_date.save
         end
         for i in (row1_to_keep + 1)..10 do
-          reset_row(i)
+          date = Booking.find(i)
+          date.lawn1 = false
+          date.lawn2 = false
+          date.lawn3 = false
+          date.day = today.next_day(i-1)
+          date.save
         end
       end
     end

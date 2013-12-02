@@ -2,11 +2,6 @@ CCBCWebsite::Application.routes.draw do
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-#  get "booking/index"
-#  get "booking/show"
-#  get "booking/book1"
-#  get "booking/book2"
-#  get "booking/book3"
   root "ccbc_core#Home"
   
   get "/about" => "ccbc_core#About"
@@ -17,7 +12,6 @@ CCBCWebsite::Application.routes.draw do
   get "/club" => "ccbc_core#Club"
   get "/map" => "ccbc_core#Map"
   get "/links" => "ccbc_core#Links"
-#  get "/booking" => "ccbc_core#Booking"
   
   get "/booking" => "booking#index"
   get "/booking/:id" => "booking#show"
@@ -25,7 +19,7 @@ CCBCWebsite::Application.routes.draw do
   get "/booking/:id/book2" => "booking#book2"
   get "/booking/:id/book3" => "booking#book3"
   get "/source" => "booking#source"
-  get "/destroyer" => "booking#reset_all"
+  get "/update/:id" => "booking#update"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
