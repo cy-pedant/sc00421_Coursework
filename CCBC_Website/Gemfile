@@ -6,6 +6,18 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Using ActiveAdmin for various features
+# The additional gems are to ensure full compatability with rails 4.0
+# They come from seanlinsley's recommendation on https://github.com/gregbell/active_admin/issues/2322
+# After a failure to bundle install, I removed most of them save for ransack, and bundle install worked
+gem 'activeadmin',         github: 'gregbell/active_admin'
+gem 'ransack'             # github: 'ernie/ransack'
+# gem 'inherited_resources', github: 'josevalim/inherited_resources'
+# gem 'formtastic',          github: 'justinfrench/formtastic'
+
+# Use CarrierWave to upload files (.pdf files in this application)
+gem 'carrierwave'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

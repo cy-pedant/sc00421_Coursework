@@ -26,8 +26,8 @@ h1#header_title {
 }
 
 table#header_table {
-  
   width:100%;
+  margin-bottom: 0px;
   
   tr {
     
@@ -35,19 +35,30 @@ table#header_table {
 //      border: 1px solid black;
     }
 
+    td.image_cell {
+      width: 20%;
+      padding-left:10px; padding-right:10px;
+    }
+
+    td.title_cell {
+      padding-left: 0px;
+      vertical-align: middle;
+      text-align: left;
+    }
+
     td.filler_cell {
-      width: 33%;
+      vertical-align: top;
+      text-align:right;
+  
+  a#admin_login {
+    text-decoration: none;
+  }
+
+  a:hover#admin_login {
+    text-decoration: underline;
+  }
     }
   }
-}
-
-td.image_cell {
-  width: 20%;
-  padding-left:10px; padding-right:10px;
-}
-
-td.title_cell {
-  padding-left: 0px;
 }
 
 nav#navbar {
@@ -93,14 +104,14 @@ footer p {
   font-size: 10px;
 }
 
-article#page_content {
-  margin-top: 0px; margin-left: auto; margin-right: auto;
+h2.article_title {
+  margin-top: 10px;
+  font-size: 30px; font-weight: bold;
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 }
 
-h2.article_title {
-  text-size: 40px;
-  font-weight: bold;
-  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+article#page_content {
+  margin-top: 0px; margin-left: auto; margin-right: auto;
 }
 
 p#intro_text {
@@ -119,6 +130,53 @@ a.intro_link:hover, a.intro_link:active {
 
 section.news p, section.info p {
   margin-left: 10px; margin-right: 10px;
+  margin: 0px 10px 10px;
   text-align: justify;
 }
 
+section#events_list, section#newsletters_list {
+  margin-top: 30px;
+  
+  h3.newsletter_year {
+    margin: 0px 10px 10px;
+    font-size: 20px; font-weight: bold;
+  }
+  
+  section.event {
+    margin: 20px 30px;
+    
+    h3.event_title {
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-family: Georgia, Times, "Times New Roman", serif;
+    }
+    
+    p.event_date {
+      margin: 5px 15px 5px 15px;
+      font-style: italic; font-size: 10px;
+    }
+    
+    p.event_desc {
+      margin: 10px 10px 5px 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+section.newsletter {
+  margin: 10px 30px 20px;
+  
+  a.newsletter_title {
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+a:hover.newsletter_title {
+  text-decoration: underline;
+}
+  
+  p.newsletter_desc {
+    margin-left: 5px;
+    font-size: 10px;
+  }
+}

@@ -16,11 +16,13 @@ class CcbcCoreController < ApplicationController
   end
   
   def Programme
-    @title = "2013 Programme"
+    @title = Time.now.year.to_s + " Programme"
+    @events = Event.all.sort_by {|event| event.date}
   end
 
   def Newsletters
     @title = "Newsletters"
+    @newsletters = Newsletter.all.sort_by {|newsletter| newsletter.date}
   end
 
   def Club
@@ -31,9 +33,9 @@ class CcbcCoreController < ApplicationController
     @title = "How to get there"
   end
   
-  def Booking
-    @title = "Booking"
-  end
+#  def Booking
+#    @title = "Booking"
+#  end
 
   def Links
     @title = "Links to Croquet Sites"

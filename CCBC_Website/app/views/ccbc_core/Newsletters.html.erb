@@ -1,3 +1,15 @@
-<h1>CcbcCore#Newsletters</h1>
-<p>Pdf files should be uploadable via the password protected admin area. The Newsletters should be grouped on this page by year. Clicking the title of a Newsletter should trigger a download of the pdf.</p>
-<p>Use CarrierWave and (something) (look at the slides on Udemy)</p>
+<h2 class="article_title">Newsletters</h2>
+
+<section id="newsletters_list">
+  <% current_year = 0 %>
+  <% @newsletters.each do |newsletter| %>
+    <% if (current_year != newsletter.date.year) then %>
+      <h3 class="newsletter_year"><%=  newsletter.date.year%></h3>
+      <% current_year = newsletter.date.year %>
+    <% end %>
+    <section class="newsletter">
+      <%= content_tag(:a,  newsletter.title, class: "newsletter_title newsletter_link", href: newsletter.pdf, download: "July Newsletter") %>
+      <p class="newsletter_desc"><%= newsletter.description %></p>
+    </section>
+  <% end %>
+</section>
