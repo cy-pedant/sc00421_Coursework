@@ -73,8 +73,13 @@ section.lawns {
     border-color: $black;
     background-color: $white;
     
+    a {
+      color: $black;
+    }
+    
     span.booked_lawn {
-      background-color: $light-grey;
+      color: $dark_grey;
+      background-color: $light_grey;
     }
   }
 
