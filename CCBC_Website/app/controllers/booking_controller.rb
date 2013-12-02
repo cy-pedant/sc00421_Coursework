@@ -7,14 +7,11 @@ class BookingController < ApplicationController
   def index
     @title = "Book a Lawn"
     @days = Booking.all
-    # Here's where the updating action would go
-    # update_table
   end
 
   def show
     @title = "Book a Lawn"
     @days = Booking.all
-    # update_table
   end
   
   def source
@@ -63,7 +60,7 @@ class BookingController < ApplicationController
   def update
     first_day = Booking.find(1).day
     today = Date.today
-    if (first_day != today) then
+    if (first_day < today) then
       days_out_of_date = 0;
       while (first_day != today) do
         first_day = first_day.next
@@ -99,7 +96,7 @@ class BookingController < ApplicationController
         end
       end
     end
-    redirect_to controller: "booking", action: "show", id: params[:id]
+    redirect_to booking_path
   end
     
 end

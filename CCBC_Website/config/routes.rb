@@ -19,7 +19,7 @@ CCBCWebsite::Application.routes.draw do
   get "/booking/:id/book2" => "booking#book2"
   get "/booking/:id/book3" => "booking#book3"
   get "/source" => "booking#source"
-  get "/update/:id" => "booking#update"
+  get "/update" => "booking#update"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
