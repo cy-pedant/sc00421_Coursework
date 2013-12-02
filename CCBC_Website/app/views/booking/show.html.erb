@@ -1,7 +1,7 @@
 <h2 class="article_title"><%= @title %></h2>
 <%= content_tag(:a, "Dates not current? Click here to update", href: "\\update\\" + params[:id], class: "update_link") %>
 
-<%= render 'booking/days' %>
+<%= render 'booking/days_links' %>
 
 <section class="lawns">
   <%= content_tag(:div, "", id: "lawn1-" + params[:id], class: "lawn1") %>

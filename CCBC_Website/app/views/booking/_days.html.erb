@@ -1,9 +1,5 @@
 <ul class="days_nav">
   <% @days.each do |day| %>
-  <% if (day.id.to_s == params[:id]) then %>
-  <li><span><%= day.day.strftime("%b %d") %></span></li>
-  <% else %>
-  <li><%= link_to day.day.strftime("%b %d"), controller: "booking", action: "show", id: day %></li>
-  <% end %>
+    <li><%= content_tag(:a, day.day.strftime("%b %d"), href: "#day" + day.id.to_s)%></li>
   <% end %>
 </ul>

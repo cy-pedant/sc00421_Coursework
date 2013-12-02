@@ -1,3 +1,16 @@
 <h2 class="article_title"><%= @title %></h2>
+<%= content_tag(:a, "Dates not current? Click here to update", href: "\\update\\" + params[:id], class: "update_link") %>
 
 <%= render 'booking/days' %>
+
+<% for i in 1..10 do %>
+  <%= content_tag :section, id: "day" + i.to_s, class: "lawns" do %>
+      <% day = @days.find(i) %>
+      <ul class="days_title">
+        <li><%= content_tag(:a, day.day.strftime("%b %d"), href: "#day" + day.id.to_s)%></li>
+      </ul>
+      <%= content_tag(:div, "", id: "lawn1-" + i.to_s, class: "lawn1") %>
+      <%= content_tag(:div, "", id: "lawn2-" + i.to_s, class: "lawn2") %>
+      <%= content_tag(:div, "", id: "lawn3-" + i.to_s, class: "lawn3") %>
+  <% end %>
+<% end %>

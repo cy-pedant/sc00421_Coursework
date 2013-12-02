@@ -23,7 +23,7 @@ td.filler_cell {
 }
 
 section.lawns {
-  width: 100%; height: 400px;
+  width: 100%; height: 460px;
   
   div.lawn1 {
     position: relative;
@@ -88,7 +88,7 @@ section.lawns {
   }
 
   section.lawns {
-    height: 260px; // height: 220px;
+    height: 280px;
   
     div.lawn1 {
       width: 120px; height: 203px;
@@ -123,10 +123,12 @@ section.lawns {
     font-size: 8px;
   }
 
-  ul.days_nav li {
-  
-    a, span {
-      font-size: 10px;
+  ul.days_nav, ul.days_title {
+    li {
+    
+      a, span {
+        font-size: 10px;
+      }
     }
   }
 
@@ -139,7 +141,7 @@ section.lawns {
 
 @media screen and (max-width: 1000px) and (min-width: 700px) {
   section.lawns {
-    height: 360px; // 220px;
+    height: 420px;
     
     div.lawn1 {
       width: 150px; height: 253px;

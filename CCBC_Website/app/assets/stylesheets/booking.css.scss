@@ -5,7 +5,7 @@
 div#days_container {
   width: 100%;
 }
-ul.days_nav {
+ul.days_nav, ul.days_title{
   width: 100%;
   list-style-type: none;
   margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0;
@@ -26,6 +26,10 @@ ul.days_nav {
       text-align: center; text-decoration: none;
     }
   }
+}
+
+ul.days_title {
+  margin-bottom: 30px;
 }
 
 section.lawns {

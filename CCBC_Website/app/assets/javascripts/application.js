@@ -19,13 +19,14 @@
 jQuery(document).ready(function() {
   setTimeout(function() {
     var source = new EventSource('/source');
-    var booked_string = "<span class='booked_lawn'>This lawn has been booked</span>"
-    var unbooked_string_1 = "<a class='unbooked_lawn' href='./"
-    var unbooked_string_2 = "'>Click here to book this lawn!</a>"
+    var blank_string = "<span class= 'booked_lawn'></span>";
+    var booked_string = "<span class='booked_lawn'>This lawn has been booked</span>";
+    var unbooked_string_1 = "<a class='unbooked_lawn' href='./";
+    var unbooked_string_2 = "'>Click here to book this lawn!</a>";
     // Initialise all the lawns to be unbookable for the first few seconds
-    $('.lawn1').html(booked_string);
-    $('.lawn2').html(booked_string);
-    $('.lawn3').html(booked_string);
+    $('.lawn1').html(blank_string);
+    $('.lawn2').html(blank_string);
+    $('.lawn3').html(blank_string);
     source.addEventListener('update', function(e) {
       var obj = JSON.parse(e.data);
       if (obj.lawn1booked) {

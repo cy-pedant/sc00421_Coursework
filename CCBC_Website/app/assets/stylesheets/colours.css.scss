@@ -50,20 +50,22 @@ a.intro_link:hover, a.intro_link:active {
   background-color: $border_colour;
 }
 
-ul.days_nav li {
-  a {
-  color: $black;
-    background-color: $light_grey
-  }
-
-  span {
-    color: $white;
-    background-color: $dark_grey;
-  }
-
-  a:hover, a:active {
-    color: $white;
-    background-color: $dark_grey;
+ul.days_nav, ul.days_title {
+  li {
+    a {
+    color: $black;
+      background-color: $light_grey
+    }
+  
+    span {
+      color: $white;
+      background-color: $dark_grey;
+    }
+  
+    a:hover, a:active {
+      color: $white;
+      background-color: $dark_grey;
+    }
   }
 }
 
